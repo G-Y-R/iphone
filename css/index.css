@@ -1,0 +1,354 @@
+/*大屏导航*/
+.nav{
+	max-height:44px; 
+	background: rgba(0,0,0,0.8);
+	position: relative;
+	z-index: 2;
+}
+.big_nav{
+	margin: 0 auto;
+	max-width: 980px;
+	padding: 0 22px;
+}
+.big_nav ul{
+	line-height: 44px;
+	margin: 0 -10px;
+	width: auto;
+	height: 44px;
+	text-align: justify;
+	display: none;
+}
+.big_nav ul li{
+	/*float: left;*/
+	display: inline-block;
+}
+.big_nav ul li a{
+	color: #eee;
+}
+.big_nav ul:after{
+	content: "";
+	display: inline-block;
+	line-height: 0;
+	height: 0;
+	width: 100%;
+}
+/*小屏导航*/
+.small_nav{
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing:content-box;
+	width: 100%;
+	margin-left: -15px!important;
+	margin-right: -15px!important;
+	overflow: hidden;	
+	/* background: rgba(0,0,0,0.8); */
+	background: #000;
+}
+.small_nav ul{
+	line-height: 44px;
+	width: 100%;
+	display: none;
+	transition:all .5s;
+
+}
+.small_nav ul .tubiao{
+	height: 44px;
+	text-align: justify;	
+	
+}
+.small_nav ul .tubiao li{
+	display: inline-block;
+	vertical-align: middle;
+}
+.small_nav ul .tubiao li:nth-child(1) span{
+	width: 17px;
+	height: 1px;
+	display: block;
+	background: #fff;
+	margin: 7px auto;
+	transition:all .5s;
+
+}
+.small_nav ul li a{
+	color: #eee;
+}
+.small_nav ul>li{
+	transition:all .5s;
+	margin: 0 auto;
+	width: 90%;
+	height: 0;
+	
+}
+.small_nav .tubiao:after{
+	content: "";
+	display: inline-block;
+	line-height: 0;
+	height: 0;
+	width: 100%;
+}
+.tubiao li #active:nth-child(1){
+	transform:translateY(4px) rotate(-135deg);
+}
+.tubiao li #active:nth-child(2){
+	transform:translateY(-4px) rotate(-45deg);
+}
+@media screen and (min-width:768px){
+	.small_nav ul{
+		display: none;
+	}
+	.big_nav ul{
+		display: block;
+	}
+}
+@media screen and (max-width:768px){
+	.small_nav ul{
+		display: block;
+	}
+	.big_nav ul{
+		display: none;
+	}
+}
+/*banner开始*/
+.banner{
+	height: 78%;
+	min-height: 650px;
+	overflow: hidden;
+	margin-top: -46px;
+	/* background:pink; */
+	position: relative;
+}
+/*中间*/
+.md{
+	max-width: 2560px;
+	margin: 0 auto;
+	border-top: 2px solid #fff;
+	overflow: hidden;
+}
+.md ul li{
+	float: left;
+	max-height: 200px;
+	overflow: hidden;
+}
+.md ul li a{
+	display: block;
+	min-height: 200px;
+	height: 200px;
+	width: auto;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
+.tu{
+	padding: 0!important;
+}
+
+@media screen and (min-width: 1024px){
+	.md ul li a{
+		background-size: 360px 200px;
+	}
+	.md ul li:nth-child(1) a{
+	background: url("../images/hp_tiles_ipad_large.jpg") no-repeat center;
+}
+	.md ul li:nth-child(2) a{
+		background: url("../images/tradeup_large.jpg") no-repeat center;
+	}
+	.md ul li:nth-child(3) a{
+		background: url("../images/accessories_large.jpg") no-repeat center;
+	}
+	.md ul li:nth-child(4) a{
+		background: url("../images/teaser_large.jpg") no-repeat center;
+	}
+
+}
+@media screen and (min-width: 768px){
+	.md ul li a{
+		background-size: 640px 200px;
+	}
+		.md ul li:nth-child(1) a{
+	background: url("../images/hp_tiles_ipad_medium.jpg") no-repeat center;
+}
+	.md ul li:nth-child(2) a{
+		background: url("../images/tradeup_medium.jpg") no-repeat center;
+	}
+	.md ul li:nth-child(3) a{
+		background: url("../images/accessories_medium.jpg") no-repeat center;
+	}
+	.md ul li:nth-child(4) a{
+		background: url("../images/teaser_medium.jpg") no-repeat center;
+	}
+
+}
+@media screen and (max-width: 768px){
+	.md ul li a{
+		background-size: 736px 200px;
+	}
+		.md ul li:nth-child(1) a{
+	background: url("../images/hp_tiles_ipad_small.jpg") no-repeat center;
+}
+	.md ul li:nth-child(2) a{
+		background: url("../images/tradeup_small.jpg") no-repeat center;
+	}
+	.md ul li:nth-child(3) a{
+		background: url("../images/accessories_small.jpg") no-repeat center;
+	}
+	.md ul li:nth-child(4) a{
+		background: url("../images/teaser_small.jpg") no-repeat center;
+	}
+
+}
+
+/*底部*/
+.footer-bg{
+	font-size: 12px;
+	line-height: 1.66667;
+	background-color: #f2f2f2;
+	color: #666;
+	/* min-width: 1024px; */
+	overflow: hidden; 
+	/* width: 80px; */
+}
+.footer{
+	/*margin: 0 auto;*/
+	/* max-width: 980px; */
+	margin-top: 32px;
+	overflow: hidden;
+}
+.footer .wenzi{
+	overflow: hidden;
+}
+.footer .wenzi .lie{
+	overflow: hidden;
+	/*width: 200px;*/
+	float: left;
+	height: auto;
+	
+}
+.footer .wenzi .lie>div{
+	width: 100%;
+	float: left;
+}
+.footer .wenzi .lie>div>h3{
+	font-size: 12px;
+	line-height: 1.66667;
+	font-weight: 600;
+	letter-spacing: normal;
+	color: #333;
+	transition:all .5s;
+}
+.footer .wenzi .lie>div>ul>li>a{
+	color: #666;
+	font-size: 12px;
+}
+.footer .wenzi .lie>div>ul>li>a:hover{
+	text-decoration: underline;
+}
+.sm-jia{
+	float: right;
+	margin-right: 30px;
+	display: none;
+}
+@media screen and (min-width: 1024px){
+	.footer .wenzi .lie{
+		width: 20%;
+	}
+
+
+}
+@media screen and (min-width: 768px){
+	.footer .wenzi .lie{
+		width: 20%;
+	}
+
+}
+@media screen and (max-width: 768px){
+	/* .footer .wenzi .lie{
+		padding-left: -15px;
+		padding-right: -15px;
+	} */
+	.footer .wenzi .lie{
+		width: 100%;
+	}
+	.footer .wenzi .lie div{
+		border-bottom: 1px solid #ccc;
+		/* height: 40px; */
+		padding-top:10px; 
+	}
+	.footer .wenzi .lie div ul{
+		display: none;
+	}
+	.sm-jia{
+		display:block;
+	}
+}
+/*版权*/
+.banq{
+	color: #999;
+	padding: 20px 0 24px;
+	font-size: 12px;
+	background: #f2f2f2;
+}
+.banq .b_s{
+	border-bottom: 1px solid #e3e3e3;
+	margin-bottom: 6px;
+	padding-bottom: 5px;
+	font-size: 12px;
+}
+.banq .b_s span a{
+	color: #08c;
+}
+.banq .b_s span a:hover{
+	color: #000;
+	text-decoration: underline;
+}
+.b_y{
+	float: right;
+}
+.b_y a{
+	color: #666;
+	font-size: 12px;
+}
+.b_y a span{
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url("../images/16.png");
+	padding-right: 5px;
+	background-position: left center;
+	cursor: pointer;
+	float: left;
+	margin-top: 1px;
+	vertical-align: middle;
+}
+.b_z{
+	margin-bottom: 10px;
+}
+.b_z div:nth-child(1){
+	float: left;
+	margin-right: 26px;
+}
+.b_z div:nth-child(2){
+	float: left;
+}
+.b_z div:nth-child(2) a{
+	padding:0 12px;
+	color: #666;
+}
+.b_z div:nth-child(2) a:hover{
+	text-decoration: underline;
+	color: #000;
+}
+.banq>div:last-child{
+	margin-top:20px;
+	margin-bottom: 20px;
+	color: rgb(153, 153, 153);
+}
+.banq>div:last-child a{
+	color: rgb(153, 153, 153);
+}
+.banq>div:last-child a:hover{
+	color: #000;
+	text-decoration: underline;
+}
+
+
